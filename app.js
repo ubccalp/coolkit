@@ -23,7 +23,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/step-1', (req, res) => {
-    res.render('step-1-activity-homepage', { title: 'Step 1: Start a Conversation' });
+    res.render('step-1-activity-homepage', { title: 'Step 1: Start A Conversation' });
+});
+
+app.get('/step-2', (req, res) => {
+    res.render('step-2-activity-homepage', { title: 'Step 2: Map Your Block' });
 });
 
 app.listen(port, () => {
