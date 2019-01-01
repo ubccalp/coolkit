@@ -30,6 +30,10 @@ app.get('/step-2', (req, res) => {
     res.render('step-2-activity-homepage', { title: 'Step 2: Map Your Block' });
 });
 
+app.get('/step-3', (req, res) => {
+    res.render('step-3-activity-homepage', { title: 'Step 3: Rate Your Block' });
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
