@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Home' });
 });
 
+app.get('/step-1', (req, res) => {
+    res.render('step-1-activity-homepage', { title: 'Step 1: Start a Conversation' });
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
