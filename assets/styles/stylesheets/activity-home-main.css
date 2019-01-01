@@ -66,6 +66,11 @@
     margin-top: 55px;
 }
 
+.image-for-step-5 {
+    height: 250px;
+    margin-top: 55px;
+}
+
 .activity-homepage-heading {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -108,6 +113,13 @@
     padding-left: 15px;
     padding-bottom: 55px;
     background-color:#7ed1e4;
+}
+
+.column-adjustment-step-5 {
+    padding-right: 80px;
+    padding-left: 15px;
+    padding-bottom: 55px;
+    background-color:#fb5c72;
 }
 
 .right-panel-adjustment {
@@ -164,6 +176,18 @@
     float: left;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#7ed1e4), to(#7ed1e4));
     background-image: linear-gradient(180deg, #7ed1e4, #7ed1e4);
+}
+
+.left-panel-step-5 {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display: inline-block;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fb5c72), to(#fb5c72));
+    background-image: linear-gradient(180deg, #fb5c72, #fb5c72);
 }
 
 .top-margin-adjustment-for-fixed-navbar{

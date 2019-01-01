@@ -38,6 +38,10 @@ app.get('/step-4', (req, res) => {
     res.render('step-4-activity-homepage', { title: 'Step 4: Visioning Your Future' });
 });
 
+app.get('/step-5', (req, res) => {
+    res.render('step-5-activity-homepage', { title: 'Step 5: Action On The Ground' });
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
