@@ -34,6 +34,10 @@ app.get('/step-3', (req, res) => {
     res.render('step-3-activity-homepage', { title: 'Step 3: Rate Your Block' });
 });
 
+app.get('/step-4', (req, res) => {
+    res.render('step-4-activity-homepage', { title: 'Step 4: Visioning Your Future' });
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
