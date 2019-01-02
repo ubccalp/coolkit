@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 5000;
 var exphbs = require('express-handlebars');
+var path = require('path');
 
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',
@@ -16,6 +17,7 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 app.use(express.static(__dirname + '/assets'));
+// app.use('/', express.static(__dirname + '/assets'));
 
 // Home Page
 app.get('/', (req, res) => {
@@ -24,6 +26,14 @@ app.get('/', (req, res) => {
 
 app.get('/step-1', (req, res) => {
     res.render('step-1-activity-homepage', { title: 'Step 1: Start A Conversation' });
+});
+
+app.get('/s1a1', (req, res) => {
+    res.render('step-1-activity-1', { title: 'Collecting Stories' });
+});
+
+app.get('/s2a1', (req, res) => {
+    res.render('step-2-activity-1', { title: 'Collecting Stories' });
 });
 
 app.get('/step-2', (req, res) => {
