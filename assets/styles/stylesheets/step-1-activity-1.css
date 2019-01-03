@@ -1,0 +1,41 @@
+.heading-color-adjustment {
+    color: #97cd70;
+}
+
+.margin-bottom-adjustment {
+    margin-bottom: 50px;
+}
+
+.margin-left-adjustment {
+    margin-left: -40px;
+}
+
+.storyheading {
+    color: #707070;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.textarea-size-adjustment {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+.width-adjustment {
+    width: 100%;
+}
+
+.div-block-16 {
+    display: inline-block;
+    float: right;
+    margin-bottom: 55px;
+}
+
+.leftbutton {
+    margin-right: 10px;
+}
+
+.button-bottom-margin-adjustment {
+    margin-bottom: 20px;
+}
