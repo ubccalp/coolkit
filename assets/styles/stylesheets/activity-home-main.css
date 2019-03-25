@@ -200,6 +200,10 @@
     display: block;
 }
 
+.activity-coming-soon {
+    opacity: 0.6;
+}
+
 @media (min-width: 768px) {
     .div-block-3 {
         margin-top: 60px;

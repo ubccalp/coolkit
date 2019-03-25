@@ -57,3 +57,18 @@
     color: white;
     border: 0;
 }
+
+.inactive-link {
+    pointer-events: none;
+    cursor: default;
+ }
+
+@media (min-width: 768px) {
+    .caret {
+        display: none;
+    }
+
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+      display: block;
+    }
+}
