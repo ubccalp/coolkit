@@ -1,13 +1,13 @@
 # :leaves: Coolkit
 
-[Official website for the Coolkit](http://icoolkit.net)
+<a href="http://icoolkit.net" target="_blank">Official website for the Coolkit</a>
 
-![alt text](coolkit.png)
+![alt text](https://raw.githubusercontent.com/ilovefroyos/coolkit/master/coolkit.png)
 
 ## Installation
 ### Requirements
 You'll need to install the following before you can run the application:
-* [Node.js](https://nodejs.org/en/)
+* <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
 
 ### Set up
 Clone the repository:
@@ -25,4 +25,4 @@ npm install
 This will create a directory called node_modules and put within it the dependencies listed in the package.json file.
 
 ## Development
-To start a server locally for development purposes, you can run either ```npm start``` or ```npm run dev``` (see [nodemon](https://nodemon.io)). The server will be listening on port 5000; the application should now be accessible at http://localhost:5000.
+To start a server locally for development purposes, you can run either ```npm start``` or ```npm run dev``` (see <a href="https://nodemon.io" target="_blank">nodemon</a>). The server will be listening on port 5000; the application should now be accessible at <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>.
