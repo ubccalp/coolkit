@@ -1,9 +1,9 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var path = require('path');
-var routes = require('./routes')
+var routes = require('./routes');
 
-var app = express()
+var app = express();
 
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',
