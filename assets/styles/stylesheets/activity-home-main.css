@@ -10,7 +10,7 @@
 .activity-description {
     margin-bottom: 0px;
     color: #707070;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 18px;
 }
 
@@ -229,5 +229,5 @@
         padding-left: 30px;
         background-color: #ffffff;
         float: left;
-    }    
+    }
 }
