@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/a1', (req, res) => {
-    res.render('step-1-activity-1', { title: 'Collecting Stories | Coolkit' });
+    res.render('step-1-activity-1', { title: 'Story Collection | Coolkit' });
 });
 
 module.exports = router;
