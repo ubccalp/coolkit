@@ -48,7 +48,7 @@
                     <h3 class="activity-heading-1 heading-color-adjustment">What is Habitat Mapping?</h3>
                     <p>There are many different habitats(other than human habitat) on your block.<br>Here are
                         are some examples of different habitats that you can map in this exercise</p>
-                    
+
                     <h3 class="activity-description heading-color-adjustment">1. "Squirrel Habitat" - Trees & Canopy</h3>
                     <p>Now that you have an idea of how safe it is for squirrels on your block after the Urban Forest Quest, examine
                     all the trees on your neighbourhood map and figure out how much canopy cover you have. The results of urban tree
@@ -70,6 +70,38 @@
                       help mitigate and adapt to the effects of climate change.</p>
                 </div>
             </div>
+
+           <style>
+           /* Set the size of the div element that contains the map */
+           #map {
+             height: 500px;  /* The height is 400 pixels */
+             width: 100%;  /* The width is the width of the web page */
+           }
+           </style>
+
+           <!--The div element for the map -->
+           <div id="map"></div>
+           <script>
+           // Initialize and add the map
+           function initMap() {
+             // The location of Uluru
+             var uluru = {lat: 49.2827, lng: -123.1207};
+             // The map, centered at Uluru
+             var map = new google.maps.Map(
+               document.getElementById('map'), {zoom: 4, center: uluru});
+               // The marker, positioned at Uluru
+               var marker = new google.maps.Marker({position: uluru, map: map});
+             }
+             </script>
+             <!--Load the API from the specified URL
+             * The async attribute allows the browser to render the page while the API loads
+             * The key parameter will contain your own API key (which is not needed for this tutorial)
+             * The callback parameter executes the initMap() function
+           -->
+           <script async defer
+           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPpG_4CouBgdG8AuvOEYziy4ufST4wRRg&callback=initMap">
+           </script>
+           <br>
 
         </div>
 
