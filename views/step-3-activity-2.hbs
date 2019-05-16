@@ -33,98 +33,54 @@
         </div>
 
 
-        <div class="col-md-9 right-panel-adjustment activity-page-right-panel-column-adjustment">
 
-            <div class="div-block-7">
-                <div class="div-block-6">
-                    <h3 class="activity-heading-1 heading-color-adjustment">Assignment:</h3>
-                    <p>Gather several colorful markers and satellite photos of your block/yard to map on. Depends on the mapping tools
-                    you use, you will need a computer or some hard copies of photos (you can print them on regular paper instead of photo paper.
-                    Recommended size: 11" by 17" or 18" by 24")</p>
-                    <br>
+                <div class="col-md-9 right-panel-adjustment activity-page-right-panel-column-adjustment">
 
-                    <h3 class="activity-heading-1 heading-color-adjustment">What is Habitat Mapping?</h3>
-                    <p>There are many different habitats(other than human habitat) on your block.<br>Here are
-                        are some examples of different habitats that you can map in this exercise</p>
+                    <div class="div-block-7">
+                        <div class="div-block-6">
+                            <h3 class="activity-heading-1 heading-color-adjustment">Causes & Mitigation</h3>
+                            <p>A higher score indicates a lowercarbon footprint.</p>
+                            <br>
 
-                    <h3 class="activity-description heading-color-adjustment">1. "Squirrel Habitat" - Trees & Canopy</h3>
-                    <p>Now that you have an idea of how safe it is for squirrels on your block after the Urban Forest Quest, examine
-                    all the trees on your neighbourhood map and figure out how much canopy cover you have. The results of urban tree
-                    canopies have many important benefits, such as lowering temperatures and reducing store effects.</p>
+                            <h3 class="activity-description heading-color-adjustment">1. What is the most common house type?</h3>
+                            <form>
+                              <input type="radio" name="climate" value="3" checked> Multi-story aoartment<br>
+                              <input type="radio" name="climate" value="2"> Multiple units on each lot (eg. duplex, townhouse, coach-house)<br>
+                              <input type="radio" name="climate" value="1"> Single family homes
+                            </form>
 
-                    <h3 class="activity-description heading-color-adjustment">2. "Worm Habitat" - Lawns & Soil</h3>
-                    <p>These soft surfaces allow water to pass into the ground, reducing the flodding and amount of contaminants entering
-                       streams all at once. Soil provides important habitat for many types of underground creatures, and space for trees, plants,
-                       and fungi to  grow.</p>
+                            <h3 class="activity-description heading-color-adjustment">2. % of homes on your block using solar panels?</h3>
+                            <form>
+                              <input type="radio" name="climate" value="3" checked> > 40%<br>
+                              <input type="radio" name="climate" value="2"> 20 - 40 %<br>
+                              <input type="radio" name="climate" value="1"> < 20%
+                            </form>
 
-                   <h3 class="activity-description heading-color-adjustment">3. "Car Habitat" - Hard Pavement</h3>
-                   <p>Pavement is an impervious surface, which forces stormwater into the sewers or pipes rather than into the soil. This can
-                      result in chemicals from the road entering streams and heavy water flow damaging the stream banks. Roads and parking lots
-                      also take up a lot of space and increase temperatures.</p>
+                           <h3 class="activity-description heading-color-adjustment">3. % of cars on your block that are EVs, hybrids, or car-shares?</h3>
+                           <form>
+                             <input type="radio" name="climate" value="3" checked> > 40%<br>
+                             <input type="radio" name="climate" value="2"> 20 - 40 %<br>
+                             <input type="radio" name="climate" value="1"> < 20%
+                           </form>
 
-                   <h3 class="activity-description heading-color-adjustment">4. "Pigeon Habitat" - Buildings & Roofs</h4>
-                   <p>These hard surfaces also effect storm water drainage, often directing rainwater straight into the drains and not to the
-                      plants which need it during droughts. Roofs can also provide space for solar panel or green roof installation, which can
-                      help mitigate and adapt to the effects of climate change.</p>
+                           <h3 class="activity-description heading-color-adjustment">4. How often do you see people riding bikes on your block?</h4>
+                             <form>
+                               <input type="radio" name="climate" value="3" checked> Very frequently (> 10/hour)<br>
+                               <input type="radio" name="climate" value="2"> Sometimes (1-10/hour)<br>
+                               <input type="radio" name="climate" value="1"> Not ofter (< 1/hour)
+                             </form>
+
+                          <h3 class="activity-description heading-color-adjustment">5. What is the amount of tree canopy on your block?</h4>
+                            <form>
+                              <input type="radio" name="climate" value="3" checked> > 40%<br>
+                              <input type="radio" name="climate" value="2"> 20 - 40 %<br>
+                              <input type="radio" name="climate" value="1"> < 20%
+                            </form>
+                        </div>
+                    </div>
+
 
                 </div>
-            </div>
-
-           <style>
-           /* Set the size of the div element that contains the map */
-           #map {
-             height: 500px;  /* The height is 400 pixels */
-             width: 100%;  /* The width is the width of the web page */
-           }
-           </style>
-
-           <!--The div element for the map -->
-           <div id="map"></div>
-           <script>
-           // Initialize and add the map
-           function initMap() {
-             // The location of Uluru
-             var uluru = {lat: 49.2827, lng: -123.1207};
-             // The map, centered at Uluru
-             var map = new google.maps.Map(
-               document.getElementById('map'), {zoom: 12, center: uluru});
-               // The marker, positioned at Uluru
-
-               var marker = new google.maps.Marker({position: uluru, map: map});
-
-               var drawingManager = new google.maps.drawing.DrawingManager({
-                 drawingMode: google.maps.drawing.OverlayType.MARKER,
-                 drawingControl: true,
-                 drawingControlOptions: {
-                   position: google.maps.ControlPosition.TOP_CENTER,
-                   drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
-                 },
-                 markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
-                 circleOptions: {
-                   fillColor: '#ffff00',
-                   fillOpacity: 1,
-                   strokeWeight: 5,
-                   clickable: false,
-                   editable: true,
-                   zIndex: 1
-                 }
-               });
-               drawingManager.setMap(map);
-
-
-             }
-            </script>
-             <!--Load the API from the specified URL
-             * The async attribute allows the browser to render the page while the API loads
-             * The key parameter will contain your own API key (which is not needed for this tutorial)
-             * The callback parameter executes the initMap() function
-           -->
-           <script async defer
-           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPpG_4CouBgdG8AuvOEYziy4ufST4wRRg&libraries=drawing&callback=initMap">
-           </script>
-           <br>
-
-        </div>
 
     </div>
 </div>
