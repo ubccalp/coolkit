@@ -64,11 +64,11 @@
                       result in chemicals from the road entering streams and heavy water flow damaging the stream banks. Roads and parking lots
                       also take up a lot of space and increase temperatures.</p>
 
-                   <h4 class="activity-description heading-color-adjustment">4. "Pigeon Habitat" - Buildings & Roofs</h4>
+                   <h3 class="activity-description heading-color-adjustment">4. "Pigeon Habitat" - Buildings & Roofs</h4>
                    <p>These hard surfaces also effect storm water drainage, often directing rainwater straight into the drains and not to the
                       plants which need it during droughts. Roofs can also provide space for solar panel or green roof installation, which can
                       help mitigate and adapt to the effects of climate change.</p>
-                      
+
                 </div>
             </div>
 
@@ -89,18 +89,40 @@
              var uluru = {lat: 49.2827, lng: -123.1207};
              // The map, centered at Uluru
              var map = new google.maps.Map(
-               document.getElementById('map'), {zoom: 4, center: uluru});
+               document.getElementById('map'), {zoom: 12, center: uluru});
                // The marker, positioned at Uluru
+
                var marker = new google.maps.Marker({position: uluru, map: map});
+
+               var drawingManager = new google.maps.drawing.DrawingManager({
+                 drawingMode: google.maps.drawing.OverlayType.MARKER,
+                 drawingControl: true,
+                 drawingControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER,
+                   drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
+                 },
+                 markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+                 circleOptions: {
+                   fillColor: '#ffff00',
+                   fillOpacity: 1,
+                   strokeWeight: 5,
+                   clickable: false,
+                   editable: true,
+                   zIndex: 1
+                 }
+               });
+               drawingManager.setMap(map);
+
+
              }
-             </script>
+            </script>
              <!--Load the API from the specified URL
              * The async attribute allows the browser to render the page while the API loads
              * The key parameter will contain your own API key (which is not needed for this tutorial)
              * The callback parameter executes the initMap() function
            -->
            <script async defer
-           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPpG_4CouBgdG8AuvOEYziy4ufST4wRRg&callback=initMap">
+           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPpG_4CouBgdG8AuvOEYziy4ufST4wRRg&libraries=drawing&callback=initMap">
            </script>
            <br>
 
