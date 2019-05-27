@@ -1,3 +1,4 @@
+var mongo = require('mongodb');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var path = require('path');
@@ -13,7 +14,7 @@ app.engine('.hbs', exphbs({
             this._sections[name] = options.fn(this);
             return null;
         }
-    }, 
+    },
     extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
