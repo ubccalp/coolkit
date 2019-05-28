@@ -53,21 +53,29 @@
                     <p>Now that you have an idea of how safe it is for squirrels on your block after the Urban Forest Quest, examine
                     all the trees on your neighbourhood map and figure out how much canopy cover you have. The results of urban tree
                     canopies have many important benefits, such as lowering temperatures and reducing store effects.</p>
+                    <img src="/media/images/green.png" >
+
 
                     <h3 class="activity-description heading-color-adjustment">2. "Worm Habitat" - Lawns & Soil</h3>
                     <p>These soft surfaces allow water to pass into the ground, reducing the flodding and amount of contaminants entering
                        streams all at once. Soil provides important habitat for many types of underground creatures, and space for trees, plants,
                        and fungi to  grow.</p>
+                       <img src="/media/images/yellow.png" >
+
 
                    <h3 class="activity-description heading-color-adjustment">3. "Car Habitat" - Hard Pavement</h3>
                    <p>Pavement is an impervious surface, which forces stormwater into the sewers or pipes rather than into the soil. This can
                       result in chemicals from the road entering streams and heavy water flow damaging the stream banks. Roads and parking lots
                       also take up a lot of space and increase temperatures.</p>
+                      <img src="/media/images/red.png" >
 
-                   <h3 class="activity-description heading-color-adjustment">4. "Pigeon Habitat" - Buildings & Roofs</h4>
+
+                   <h3 class="activity-description heading-color-adjustment">4. "Pigeon Habitat" - Buildings & Roofs</h3>
                    <p>These hard surfaces also effect storm water drainage, often directing rainwater straight into the drains and not to the
                       plants which need it during droughts. Roofs can also provide space for solar panel or green roof installation, which can
                       help mitigate and adapt to the effects of climate change.</p>
+                  <img src="/media/images/blue.png" >
+
 
                 </div>
             </div>
@@ -92,16 +100,15 @@
                document.getElementById('map'), {zoom: 12, center: uluru});
                // The marker, positioned at Uluru
 
-               var marker = new google.maps.Marker({position: uluru, map: map});
+               //var marker = new google.maps.Marker({position: uluru, map: map});
 
                var drawingManager = new google.maps.drawing.DrawingManager({
                  drawingMode: google.maps.drawing.OverlayType.MARKER,
                  drawingControl: true,
                  drawingControlOptions: {
                    position: google.maps.ControlPosition.TOP_CENTER,
-                   drawingModes: ['marker', 'circle', 'polygon','polyline', 'rectangle']
+                   drawingModes: ['circle', 'polygon','polyline', 'rectangle']
                  },
-                 markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
                  circleOptions: {
                    fillColor: 'green',
                    strokeColor: 'green',
@@ -123,8 +130,8 @@
                    zIndex: 1
                  },
                  polylineOptions:{
-                   fillColor: 'blue',
-                   strokeColor: 'blue',
+                   fillColor: 'red',
+                   strokeColor: 'red',
                    fillOpacity: 0.1,
                    strokeWeight: 5,
                    clickable: true,
@@ -133,8 +140,8 @@
                    zIndex: 1
                  },
                  rectangleOptions:{
-                   fillColor: 'red',
-                   strokeColor: 'red',
+                   fillColor: 'blue',
+                   strokeColor: 'blue',
                    fillOpacity: 0.1,
                    strokeWeight: 5,
                    clickable: true,
