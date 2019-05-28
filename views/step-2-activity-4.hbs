@@ -103,13 +103,45 @@
                  },
                  markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
                  circleOptions: {
-                   fillColor: '#ffff00',
-                   fillOpacity: 1,
+                   fillColor: 'green',
+                   strokeColor: 'green',
+                   fillOpacity: 0.2,
                    strokeWeight: 5,
                    clickable: false,
                    editable: true,
                    zIndex: 1
+                 },
+                 polygonOptions:{
+                   fillColor: '#ffff00',
+                   strokeColor: '#ffff00',
+                   fillOpacity: 0.2,
+                   strokeWeight: 5,
+                   clickable: false,
+                   draggable: true,
+                   editable: true,
+                   zIndex: 1
+                 },
+                 polylineOptions:{
+                   fillColor: 'blue',
+                   strokeColor: 'blue',
+                   fillOpacity: 0.1,
+                   strokeWeight: 5,
+                   clickable: false,
+                   draggable: true,
+                   editable: true,
+                   zIndex: 1
+                 },
+                 rectangleOptions:{
+                   fillColor: 'red',
+                   strokeColor: 'red',
+                   fillOpacity: 0.1,
+                   strokeWeight: 5,
+                   clickable: false,
+                   draggable: true,
+                   editable: true,
+                   zIndex: 1
                  }
+
                });
                drawingManager.setMap(map);
 
