@@ -2,13 +2,13 @@ var { Router } = require('express');
 
 var router = Router();
 
+var community = require('./community');
 var step_1 = require('./step-1');
 var step_2 = require('./step-2');
 var step_3 = require('./step-3');
 var step_4 = require('./step-4');
 var step_5 = require('./step-5');
 var ed = require('./ed');
-var community = require('./community');
 
 router.use('/step-1', step_1);
 router.use('/step-2', step_2);
