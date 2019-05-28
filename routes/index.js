@@ -8,6 +8,7 @@ var step_3 = require('./step-3');
 var step_4 = require('./step-4');
 var step_5 = require('./step-5');
 var ed = require('./ed');
+var community = require('./community');
 
 router.use('/step-1', step_1);
 router.use('/step-2', step_2);
@@ -15,6 +16,8 @@ router.use('/step-3', step_3);
 router.use('/step-4', step_4);
 router.use('/step-5', step_5);
 router.use('/ed', ed);
+router.use('/community', community);
+
 
 router.get('/', (req, res) => {
     res.render('index', { title: "Citizen's Coolkit" });
