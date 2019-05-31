@@ -51,6 +51,7 @@
                         <img src="/media/images/habitat-mapping.png"  height="180" width="900">
 
                     <div class="container-fluid custom-container">
+
                     <div class="col-md-7">
                     <h3 class="activity-description heading-color-adjustment">1. "Squirrel Habitat" - Trees & Canopy</h3>
                     <p>Now that you have an idea of how safe it is for squirrels on your block after the Urban Forest Quest, examine
@@ -68,7 +69,7 @@
                        streams all at once. Soil provides important habitat for many types of underground creatures, and space for trees, plants,
                        and fungi to  grow.</p>
                      </div>
-                      <div class="col-md-2">
+                      <div class="col-md-5">
                        <img src="/media/images/yellow.png" height="180" width="360">
                      </div>
 
@@ -78,7 +79,7 @@
                       result in chemicals from the road entering streams and heavy water flow damaging the stream banks. Roads and parking lots
                       also take up a lot of space and increase temperatures.</p>
                     </div>
-                     <div class="col-md-2">
+                     <div class="col-md-5">
                       <img src="/media/images/red.png" height="180" width="360">
                     </div>
 
@@ -88,12 +89,13 @@
                       plants which need it during droughts. Roofs can also provide space for solar panel or green roof installation, which can
                       help mitigate and adapt to the effects of climate change.</p>
                     </div>
-                     <div class="col-md-2">
+                     <div class="col-md-5">
                   <img src="/media/images/blue.png" height="180" width="360">
                 </div>
+
                 </div>
-                    </div>
-                </div>
+              </div>
+          </div>
 
            <style>
            /* Set the size of the div element that contains the map */
@@ -118,7 +120,7 @@
                //var marker = new google.maps.Marker({position: uluru, map: map});
 
                var drawingManager = new google.maps.drawing.DrawingManager({
-                 drawingMode: google.maps.drawing.OverlayType.MARKER,
+                 //drawingMode: google.maps.drawing.OverlayType.MARKER,
                  drawingControl: true,
                  drawingControlOptions: {
                    position: google.maps.ControlPosition.TOP_CENTER,
@@ -164,11 +166,8 @@
                    editable: true,
                    zIndex: 1
                  }
-
                });
                drawingManager.setMap(map);
-
-
              }
             </script>
              <!--Load the API from the specified URL
