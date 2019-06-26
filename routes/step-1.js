@@ -19,7 +19,7 @@ router.get('/a3', (req, res) => {
 });
 
 router.get('/a4', (req, res) => {
-    res.render('step-1-activity-4', { title: 'Non-Trivia QUiz | Coolkit' });
+    res.render('step-1-activity-4', { title: 'Non-Trivia Quiz | Coolkit' });
 });
 
 
