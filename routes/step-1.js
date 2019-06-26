@@ -22,5 +22,4 @@ router.get('/a4', (req, res) => {
     res.render('step-1-activity-4', { title: 'Non-Trivia Quiz | Coolkit' });
 });
 
-
 module.exports = router;
