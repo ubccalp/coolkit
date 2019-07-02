@@ -17,8 +17,11 @@ router.use('/step-3', step_3);
 router.use('/step-4', step_4);
 router.use('/step-5', step_5);
 router.use('/ed', ed);
+router.use('/resources', resources);
 router.use('/community', community);
-router.use('/about-us', about_us)
+router.use('/about-us', about_us);
+router.use('/background', background)
+
 
 
 router.get('/', (req, res) => {
