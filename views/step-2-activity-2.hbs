@@ -1,7 +1,7 @@
 {{#section 'stylesheets'}}
     <link rel="stylesheet" href="/styles/stylesheets/activity-home-main.css">
     <link rel="stylesheet" href="/styles/stylesheets/activity.css">
-    <link rel="stylesheet" href="/styles/stylesheets/step-2-activity-1.css">
+    <link rel="stylesheet" href="/styles/stylesheets/step-2-activity-2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
     integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
     crossorigin="anonymous"></script>
@@ -33,9 +33,11 @@
             </div>
         </div>
 
+
         <div class="col-md-9 right-panel-adjustment activity-page-right-panel-column-adjustment">
 
             <div class="div-block-7">
+              <img src="/media/images/magnify.png">
                 <div class="div-block-6">
                     <h3 class="activity-heading-1 heading-color-adjustment">Do You Know...</h3>
                     <p>How many carbon-emitting cars park on your block?<br>
@@ -44,8 +46,90 @@
                 </div>
             </div>
 
-            <div>
-                <h3 class="activity-heading-1 heading-color-adjustment">Assignment:</h3>
+
+            <div class="div-block-8 text-color-adjustment">
+              <form novalidate onsubmit="return false">
+                <br />
+                <br />
+                <br />
+                <br />
+
+                  <div class="div-block-9">
+                      <!--<h4 class="activity-instruction-heading">1) Count the Trees</h4>-->
+                      <p class="assignmentparagraph">1. How many cars are on your block? <label>Total:
+                          <input type="number" id="street_trees" name="streetTrees" required>
+                      </label></p>
+
+                      <p class="assignmentparagraph">2. How many cars are electric, hybrid vehicles, or carshares (ex. Modo)?
+                      <label>Total:
+                          <input type="number" id="garden_trees" name="gardenTrees" required>
+                      </label></p>
+
+                      <p><b>% of sustainable cars on your block</b> Simply divide your Q2 answer by Q1.
+                      <label>Total:
+                          <input type="number" id="garden_trees" name="gardenTrees" required>
+                      </label></p>
+
+                      <p class="assignmentparagraph">3. How many are riding bikes in/through your block?
+                      <label>Total:
+                          <input type="number" id="garden_trees" name="gardenTrees" required>
+                      </label></p>
+                  </div>
+
+
+                  <div class="div-block-10">
+
+                      <!--<h4 class="activity-instruction-heading"></h4>-->
+                      <p class="assignmentparagraph">1. How many households have gardens (planted areas with shubs and/or trees) on your block?<br>
+                      Front yard:
+                          <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required>
+
+                      Backyard:
+                          <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required>
+
+                      Total:
+                          <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required>
+                      </p>
+
+                      <p class="assignmentparagraph">2. How many households are growing food?
+                      <label>Total:
+                          <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required>
+                      </label></p>
+
+                      <p class="assignmentparagraph"><b>% of food gardens on your block?</b> Simply divide your Q2 answer by Q1.
+                      <label>Total:
+                          <input type="number" id="garden_trees" name="gardenTrees" required>
+                      </label></p>
+
+                      <p class="assignmentparagraph">3. What is the most commonly grown vegetable on your block?
+                        <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required>
+                      </p>
+
+                  </div>
+
+                  <div class="div-block-11">
+                      <!--<h4 class="activity-instruction-heading">3) The Leaping Squirrel Test</h4>-->
+                      <!--<p class="assignmentparagraph" style="margin-bottom:30px;">Check out your block’s street tree
+                          canopy by using the distance a squirrel leaps. Squirrels live up in the trees and are safer
+                          there than on the ground. Assume squirrels can leap about 2 metres (6 ft or a person’s
+                          height) between branches:<br><br>Can a squirrel make it from one end of the block to the
+                          other and cross the street at least twice, without coming down to the ground?‍</p>-->
+                      <div class="div-block-13">
+                        <p class="assignmentparagraph">1. How many buildings have solar panels on their roofs?
+                          Count the number of buildings with solar panels.
+                         <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required></p>
+
+                         <p class="assignmentparagraph">2. How many buildings have roofs suitable for solar energy?
+                           Count the number of buildings with south-facing roofs large enough for solar panels.
+                          <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required></p>
+                      </div>
+                  </div>
+
+
+                  <div class="div-block-12">
+                      <input type="button" value="GENERATE PDF" id="generatePDF" class="btn btn-default button-1" />
+                  </div>
+              </form>
 
 
             </div>
