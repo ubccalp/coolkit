@@ -502,7 +502,7 @@
 }
 
 .left-step-number {
-    font-size: 126px;
+    font-size: 90px;
     font-weight: 700;
     text-align: left;
     display:inline-block;
@@ -511,7 +511,7 @@
 }
 
 .right-step-number {
-    font-size: 126px;
+    font-size: 90px;
     font-weight: 700;
     text-align: left;
     display:inline-block;
