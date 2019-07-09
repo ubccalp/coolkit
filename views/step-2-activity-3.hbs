@@ -1,7 +1,7 @@
 {{#section 'stylesheets'}}
     <link rel="stylesheet" href="/styles/stylesheets/activity-home-main.css">
     <link rel="stylesheet" href="/styles/stylesheets/activity.css">
-    <link rel="stylesheet" href="/styles/stylesheets/step-2-activity-1.css">
+    <link rel="stylesheet" href="/styles/stylesheets/step-2-activity-3.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
     integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
     crossorigin="anonymous"></script>
@@ -47,7 +47,63 @@
 
             <div >
                 <h3 class="activity-heading-1 heading-color-adjustment">Assignment:</h3>
+                <div class="div-block-8 text-color-adjustment">
+                  <form novalidate onsubmit="return false">
+                  </br></br></br></br>
+                    <div class="div-block-9">
+                          <!--<h4 class="activity-instruction-heading">1) Count the Trees</h4>-->
+                        </br>
+                        <div class="div-block-14">
+                          <p class="assignmentparagraph">Check your own carbon footprint <a href="https://www.carbonfootprint.com/calculator.aspx">here</a></p>
+                        </div>
+                        <div class="div-block-13">
+                          <p class="assignmentparagraph">1. What is the household footprint in one year?
+                          <label>Total:
+                              <input type="number" id="garden_trees" name="gardenTrees" required>
+                          </label></p>
 
+                          <p class="assignmentparagraph">2. What is the carbon footprint of your daily transportation within one year?
+                          <label>Total:
+                              <input type="number" id="garden_trees" name="gardenTrees" required>
+                          </label></p>
+
+                          <p class="assignmentparagraph">3. What is the total carbon footprint of your family per year?(Q1 + Q2)
+                          <label>Total:
+                              <input type="number" id="garden_trees" name="gardenTrees" required>
+                          </label></p>
+                        </div>
+                      </div>
+
+
+                      <div class="div-block-10">
+
+                          <!--<h4 class="activity-instruction-heading"></h4>-->
+                          <br>
+                          <br>
+                          <p class="assignmentparagraph">A tree can absorb approximately 48 pounds of carbon per year.</p>
+
+                          <p class="assignmentparagraph">1. How many trees are in your property?<br>
+                          <label>Total:
+                              <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required>
+                          </label></p>
+
+                          <p class="assignmentparagraph">2. How much carbon can those trees absorb?
+                          <label>Total:
+                              <input type="number" step=0.1 id="girth_biggest_tree" name="girthBiggestTree" required>
+                          </label></p>
+
+                          <p class="assignmentparagraph">Learn more about what trees absorb the most carbon <a href="https://www.hunker.com/12557632/what-trees-absorb-the-most-carbon-dioxide">here</a></p>
+
+                      </div>
+
+
+
+                      <div class="div-block-12"></br></br></br></br></br></br></br>
+                          <input type="button" value="GENERATE PDF" id="generatePDF" class="btn btn-default button-1" />
+                          </br></br></br></br></br></br></br></br>
+                      </div>
+                  </form>
+                </div>
 
             </div>
         </div>

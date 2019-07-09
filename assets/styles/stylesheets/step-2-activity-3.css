@@ -24,10 +24,10 @@
 
 .div-block-8 {
     position: static;
-    min-height: 1020px;
+    min-height: 1000px;
     padding-right: 2%;
     padding-left: 2%;
-    background-image: url('../../media/images/ccdq.png');
+    background-image: url('../../media/images/cvq.png');
     background-size: cover;
     margin-top: 20px;
     width: 100%
@@ -35,7 +35,7 @@
 
 .div-block-9 {
     display: block;
-    width: 70%;
+    width: 60%;
     float: left;
     clear: none;
 
@@ -43,7 +43,7 @@
 
 .div-block-10 {
     display: inline-block;
-    width: 65%;
+    width: 50%;
     float: right;
     clear: both;
 }
@@ -63,7 +63,11 @@
 }
 
 .div-block-13 {
-    margin-left: 5%;
+    margin-left: 10%;
+}
+
+.div-block-14 {
+    margin-left: 20%;
 }
 
 .text-color-adjustment {
