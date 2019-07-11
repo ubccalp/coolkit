@@ -18,6 +18,14 @@ router.get('/a3', (req, res) => {
     res.render('step-4-activity-3', { title: 'Retrofit Your Home | Coolkit' });
 });
 
+router.get('/a3-house', (req, res) => {
+    res.render('step-4-activity-3-house', { title: 'Retrofit Your Home - House | Coolkit' });
+});
+
+router.get('/a3-apartment', (req, res) => {
+    res.render('step-4-activity-3-apartment', { title: 'Retrofit Your Home - Apartment| Coolkit' });
+});
+
 router.get('/a4', (req, res) => {
     res.render('step-4-activity-4', { title: 'Community Energy | Coolkit' });
 });
