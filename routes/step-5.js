@@ -26,8 +26,4 @@ router.get('/a5', (req, res) => {
     res.render('step-5-activity-5', { title: 'Develop a Low-Carbon Lifestyle | Coolkit' });
 });
 
-router.get('/a6', (req, res) => {
-    res.render('step-5-activity-6', { title: 'Additonal Resources | Coolkit' });
-});
-
 module.exports = router;
