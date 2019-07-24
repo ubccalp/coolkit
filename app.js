@@ -10,7 +10,9 @@ const MongoClient = require('mongodb').MongoClient;
 
 // replace the uri string with your connection string.
 const uri = "mongodb+srv://Coolkit:jDxgrNDb6VLs5sq7@coolkitcluster-pkuje.azure.mongodb.net/test?retryWrites=true&w=majority"
+const client = new MongoClient(uri, { useNewUrlParser: true });
 MongoClient.connect(uri, function(err, client) {
+  // perform actions on the collection object
    if(err) {
         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
    }
@@ -19,8 +21,6 @@ MongoClient.connect(uri, function(err, client) {
    // perform actions on the collection object
    client.close();
 });
-
-
 
 
 var app = express();
