@@ -1,6 +1,7 @@
-var mongo = require('mongodb');
 var express = require('express');
 var exphbs = require('express-handlebars');
+var app = express();
+var mongo = require('mongodb');
 var path = require('path');
 var routes = require('./routes');
 
@@ -9,21 +10,18 @@ var routes = require('./routes');
 const MongoClient = require('mongodb').MongoClient;
 
 // replace the uri string with your connection string.
-const uri = "mongodb+srv://Coolkit:jDxgrNDb6VLs5sq7@coolkitcluster-pkuje.azure.mongodb.net/test?retryWrites=true&w=majority"
-const client = new MongoClient(uri, { useNewUrlParser: true });
-MongoClient.connect(uri, function(err, client) {
+const uri = "mongodb+srv://tiffany:tiff123@icoolkit-jbjkz.mongodb.net/test?retryWrites=true&w=majority"
+MongoClient.connect(uri,{  useNewUrlParser: true}, function(err, client) {
   // perform actions on the collection object
    if(err) {
         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
    }
+   const collection = client.db("coolkit").collection("web");
    console.log('Connected...');
-   const collection = client.db("test").collection("devices");
-   // perform actions on the collection object
    client.close();
 });
 
 
-var app = express();
 
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',

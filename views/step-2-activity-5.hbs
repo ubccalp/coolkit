@@ -7,6 +7,23 @@
     crossorigin="anonymous"></script>
     {{! use cdn or install locally for jspdf? }}
 {{/section}}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41144200-3"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'UA-41144200-3');
+
+</script>
 
 <div class="left-panel-step-2"></div>
 
@@ -39,8 +56,8 @@
                 <div class="div-block-6">
                     <h3 class="activity-heading-1 heading-color-adjustment">What is Vulnerability Mapping?</h3>
                     <p>Vulnerability mapping shows the areas which may be susceptible to damage from environmental or manmade
-                      threats, such as climate change. This kind of mapping can help you think differently about the kind of risks which
-                      could affect your block and label things you may want to change. This is a simple mapping exercise in which you will
+                      threats, such as climate change. This type of mapping can help you think differently about the kind of risks that
+                      could affect your block and help you label things you may want to change. This is a simple mapping exercise in which you will
                       identify high and low risk areas of your block based on one or more climate change threats of your interest.</p>
                 </div>
             </div>
@@ -49,9 +66,11 @@
                 <h3 class="activity-heading-1 heading-color-adjustment">Procedure :</h3>
                 <p>
                   1. Print out an aerial photo of your block (8.5x11 landscape) <br>
-                  2. Choose one or more threats from the diagram below such as urban heat island effect (UHI), drought, or floods. Refer to page 4 for climate change risks likely to occur in Vancouver <br>
+                  2. Choose one or more risk features from the diagrams below such as urban heat island effect (UHI), drought, or floods. Refer to
+                  <a href="/background">background</a> for climate change risks likely to occur in Vancouver <br>
                   3. Identify parts of your block that would be most susceptible to these threats<br>
-                  4. Identify parts of your block which would be least susceptible to these threats, such as dense canopy,white roofs, and pervious surfaces - refer to page 18 for description of these surfaces <br>
+                  4. Identify parts of your block which would be least susceptible to these threats, such as dense canopy,white roofs, and pervious surfaces - refer to
+                  <a href="/step-2/a4">habitat mapping</a> for descriptions of these surfaces <br>
                   5. Colour in or mark high and low risk features with your own colours or symbols <br>
                   6. Think about your results, how vulnerable your block is, and what you could do to help improve conditions for the future<br></p>
             </div>
@@ -65,7 +84,99 @@
             <div class="col-md-6">
             <img src="/media/images/orangevmap.png" width=100%>
             <img src="/media/images/greenvmap.png" width=100%>
+          </br>
+          </br>
           </div>
+
+
+
+
+          <style>
+          /* Set the size of the div element that contains the map */
+          #map {
+            height: 500px;  /* The height is 400 pixels */
+            width: 100%;  /* The width is the width of the web page */
+          }
+          </style>
+
+          <!--The div element for the map -->
+          <div id="map"></div>
+          <script>
+          // Initialize and add the map
+          function initMap() {
+            // The location of Uluru
+            var uluru = {lat: 49.2827, lng: -123.1207};
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 12, center: uluru});
+              // The marker, positioned at Uluru
+
+              //var marker = new google.maps.Marker({position: uluru, map: map});
+
+              var drawingManager = new google.maps.drawing.DrawingManager({
+                //drawingMode: google.maps.drawing.OverlayType.MARKER,
+                drawingControl: true,
+                drawingControlOptions: {
+                  position: google.maps.ControlPosition.TOP_CENTER,
+                  drawingModes: ['circle', 'polygon','polyline', 'rectangle']
+                },
+                circleOptions: {
+                  fillColor: 'green',
+                  strokeColor: 'green',
+                  fillOpacity: 0.2,
+                  strokeWeight: 5,
+                  clickable: true,
+                  draggable: true,
+                  editable: true,
+                  zIndex: 1
+                },
+                polygonOptions:{
+                  fillColor: '#ffff00',
+                  strokeColor: '#ffff00',
+                  fillOpacity: 0.2,
+                  strokeWeight: 5,
+                  clickable: true,
+                  draggable: true,
+                  editable: true,
+                  zIndex: 1
+                },
+                polylineOptions:{
+                  fillColor: 'red',
+                  strokeColor: 'red',
+                  fillOpacity: 0.1,
+                  strokeWeight: 5,
+                  clickable: true,
+                  draggable: true,
+                  editable: true,
+                  zIndex: 1
+                },
+                rectangleOptions:{
+                  fillColor: 'blue',
+                  strokeColor: 'blue',
+                  fillOpacity: 0.1,
+                  strokeWeight: 5,
+                  clickable: true,
+                  draggable: true,
+                  editable: true,
+                  zIndex: 1
+                }
+              });
+              drawingManager.setMap(map);
+            }
+           </script>
+            <!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+          -->
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPpG_4CouBgdG8AuvOEYziy4ufST4wRRg&libraries=drawing&callback=initMap">
+          </script>
+          <br>
+
+
+
+
         </div>
 
     </div>
