@@ -13,8 +13,6 @@
 
   gtag('js', new Date());
 
-
-
   gtag('config', 'UA-41144200-3');
 
 </script>
@@ -22,13 +20,93 @@
 <div id="hero">
     <div class="custom-container">
         <div class="container-fluid div-block-1">
-            <img src="/media/images/coolkit.png" width="100%">
+            <!-- <img src="/media/images/coolkit.png" width="100%">-->
+
+
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <img src="/media/images/coolkit.png" style="width:100%">
+    <div class="text">iCoolkit 5 Steps</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="/media/images/meeting.jpg" style="width:80%">
+    <div class="text">CALP</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="/media/images/forest.png" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+
             <h1 class="heading-1">Welcome to the Citizen's Coolkit</h1>
             <p class="paragraph-1">Citizen's Coolkit is a structured, visual and fun guide for people to engage their blocks on issues and solutions related to climate change and urban forestry. It aims to help you climate-proof your neighbourhood while improving the urban forests that surround your home.</p>
             <a href="#section-2" class="btn btn-default button-1">START EXPLORING</a>
         </div>
     </div>
 </div>
+
+
+<!-- {{# each quotes}}
+        <div class="quotes">
+                <h3>{{ name }}</h3>
+                <br>
+                <small> {{ quote}} </small>
+                <br>
+        </div>
+{{/each}} -->
+
+<!-- <div>
+      <ul>
+            {{#fromDB}}
+            <li>{{quote}}</li>
+            <form action="/quotes" method="POST">
+                  <input type="text" class="delete-button" type="submit" name="delete" value="DELETE"></input>
+            </form>
+            {{/fromDB}}
+
+      </ul>
+</div> -->
+
+
+<!-- <form action="/quotes" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="text" placeholder="pledge" name="pledge">
+  <button type="submit">Submit</button>
+</form> -->
+
+<!--
+<div>
+      <ul>
+            {{#fromDB}}
+            <li>{{quote}}</li>
+            <form action="/userlist/{{_id}}/delete" method="POST">
+                  <input class="delete-button" type="submit" name="delete" value="DELETE"></input>
+            </form>
+            {{/fromDB}}
+
+      </ul>
+</div> -->
+
 
 <div id="section-2">
     <div class="container-fluid custom-container">
@@ -44,7 +122,7 @@
                     <li class="list-item-1"><span class="glyphicon glyphicon-leaf bullet-point-right-margin" aria-hidden="true"></span>Cut your carbon footprint together with your neighbours</li>
                     <li class="list-item-1"><span class="glyphicon glyphicon-leaf bullet-point-right-margin" aria-hidden="true"></span>Have fun along the way!</li>
                 </ul>
-                <a href="#section-3" class="btn btn-default button-1">LEARN MORE</a>
+                <a href="/background" class="btn btn-default button-1">LEARN MORE</a>
             </div>
             <div class="col-sm-6">
                 <img src="/media/images/people-with-environmental-sustainability-concept.png" alt="" class="image-12">
@@ -115,8 +193,12 @@
     <div class="container-fluid custom-container">
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="heading-7">Download the Illustrated Guide</h1>
-                <a href="http://calp2016.sites.olt.ubc.ca/files/2019/01/2019-Jan_Coolkit-Full-Version.pdf" target="_blank" class="btn btn-default button-1 button-3">DOWNLOAD PDF</a>
+                <h1 class="heading-6">Download Coolkit as a PDF file</h1>
+                <a href="http://calp2016.sites.olt.ubc.ca/files/2019/01/2019-Jan_Coolkit-Full-Version.pdf" target="_blank" class="btn btn-default button-1 button-3">DOWNLOAD FULL VERSION</a>
+                <br>
+                <br>
+                <br>
+                <a href="http://calp2016.sites.olt.ubc.ca/files/2019/01/2019-Jan_Coolkit-Mini.pdf" target="_blank" class="btn btn-default button-1 button-3">DOWNLOAD MINI VERSION</a>
             </div>
             <div class="col-sm-6">
                 <img src="/media/images/illustrated-guide2x.png" alt="" class="image-7">
@@ -134,15 +216,27 @@
         <a href="https://www.vsb.bc.ca/Pages/default.aspx" target="_blank">
             <div class="supporter" id="school-board"></div>
         </a>
+        <a href="https://vancouver.ca/" target="_blank">
+            <div class="supporter" id="city-of-vancouver"></div>
+        </a>
+        <a href="https://www.surrey.ca" target="_blank">
+            <div class="supporter" id="city-of-surrey"></div>
+        </a>
+        <a href="https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx" target="_blank">
+            <div class="supporter" id="sshrc"></div>
+        </a>
     </div>
 </div>
 
 <div id="footer">
     <div class="container-fluid custom-container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="text-block-1 top-margin-adjustment-2">
                     <span class="text-span footer-logo">Coolkit</span>
+                    <div>Beta Version</div>
+                    <br>
+                    <img src="/media/images/calp logo.png" style="width: 80%" class="footer-icon">
                 </div>
             </div>
 
@@ -151,7 +245,12 @@
                     <h3 class="footer-text footer-header">Contact Us</h3>
                     <div class="div-block-16">
                         <img src="/media/images/Location.svg" width="15" alt="" class="footer-icon">
-                        <div class="text-block-3 footer-text-3">COLLABORATIVE FOR ADVANCED LANDSCAPE PLANNING<br>3321 – 2260 West Mall Vancouver<br>BC Canada V6T 1Z4</div>
+                        <div class="text-block-3 footer-text-3">COLLABORATIVE FOR ADVANCED LANDSCAPE PLANNING<br>
+                          Dept. of Forest Resources Management <br>
+                          University of British Columbia (UBC)<br>
+                          3321 – 2260 West Mall<br>
+                          Vancouver, BC Canada <br>
+                          V6T 1Z4</div>
                     </div>
                     <div class="">
                         <img src="/media/images/phone.svg" width="18" alt="" class="footer-icon">
@@ -209,6 +308,55 @@
                 }
             });
         });
-    </script>
+
+//   var slideIndex = 1;
+// showSlides(slideIndex);
+//
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+//
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+//
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
     <!-- End Source: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2 -->
 {{/section}}

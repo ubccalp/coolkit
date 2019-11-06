@@ -6,7 +6,7 @@
 
 .custom-container {
     display: block;
-    max-width: 1200px;
+    max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -38,7 +38,7 @@
 
 .navbar-link-adjustment {
     padding-top: 25px !important;
-    padding-bottom: 25px !important; 
+    padding-bottom: 25px !important;
     font-size: 18px;
 }
 

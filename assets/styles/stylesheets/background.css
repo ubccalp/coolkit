@@ -68,7 +68,6 @@
 #section-3 {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #f6f6f6;
 }
 
 .heading-3 {
@@ -251,7 +250,6 @@
 #section-6 {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #f6f6f6;
 }
 
 .image-7 {
@@ -663,9 +661,9 @@
 
 .floating-menu {
   font-family: sans-serif;
-  background: green;
-  padding: 10px;;
-  width: 200px;
+  background: #97cd70;
+  padding: 10px;
+  width: 100px;
   z-index: 100;
   position: fixed;
   top:100px;
