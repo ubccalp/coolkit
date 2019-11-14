@@ -14,7 +14,7 @@
     line-height: 18px;
 }
 
-.div-block-3 {
+.div-block-3-step1 {
     overflow: visible;
     min-height: 120px;
     margin-top: 40px;
@@ -25,6 +25,77 @@
     border-color: rgba(64, 64, 64, .5);
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.div-block-3-step1:hover {
+    background-color: #97cd70;
+}
+
+.div-block-3-step2 {
+    overflow: visible;
+    min-height: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 18px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(64, 64, 64, .5);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.div-block-3-step2:hover {
+    background-color: #f79029;
+}
+
+.div-block-3-step3 {
+    overflow: visible;
+    min-height: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 18px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(64, 64, 64, .5);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.div-block-3-step3:hover {
+    background-color: #a14b9c;
+}
+
+.div-block-3-step4 {
+    overflow: visible;
+    min-height: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 18px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(64, 64, 64, .5);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.div-block-3-step4:hover {
+    background-color: #7ed1e4;
+}
+.div-block-3-step5 {
+    overflow: visible;
+    min-height: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 18px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(64, 64, 64, .5);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.div-block-3-step5:hover {
+    background-color: #fb5c72;
 }
 
 .div-block-4 {
