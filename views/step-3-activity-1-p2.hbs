@@ -60,41 +60,68 @@
                             <br>
 
                             <h3 class="activity-description heading-color-adjustment">1. What color is your roof?</h3>
-                            <form>
-                              <input type="radio" name="climate" value="3" checked> Light (reflecting heat)<br>
-                              <input type="radio" name="climate" value="2"> Medium<br>
-                              <input type="radio" name="climate" value="1"> Dark (absorbing heat)
-                            </form>
+                            <p>
+                              <input onblur="findTotal()" type="radio" name="q1" value="3"> Light (reflecting heat)<br>
+                              <input tonblur="findTotal()" type="radio" name="q1" value="2"> Medium<br>
+                              <input onblur="findTotal()" type="radio" name="q1" value="1"> Dark (absorbing heat)
+                            </p>
 
                             <h3 class="activity-description heading-color-adjustment">2. How do you use and store water for your gardens?</h3>
-                            <form>
-                              <input type="radio" name="climate" value="3" checked> Using roof rainwater capture (waterbutts)and rain gardens<br>
-                              <input type="radio" name="climate" value="2"> Part of the garden is irrigated with tapwater<br>
-                              <input type="radio" name="climate" value="1"> Garden fully irrigated with tap water
-                            </form>
+                            <p>
+                              <input onblur="findTotal()" type="radio" name="q2" value="3"> Using roof rainwater capture (waterbutts)and rain gardens<br>
+                              <input onblur="findTotal() "type="radio" name="q2" value="2"> Part of the garden is irrigated with tapwater<br>
+                              <input onblur="findTotal()" type="radio" name="q2" value="1"> Garden fully irrigated with tap water
+                            </p>
 
                            <h3 class="activity-description heading-color-adjustment">3. How many trees are on your property?</h3>
-                           <form>
-                             <input type="radio" name="climate" value="3" checked> > 3<br>
-                             <input type="radio" name="climate" value="2"> 1-3<br>
-                             <input type="radio" name="climate" value="1"> 0
-                           </form>
+                           <p>
+                             <input onblur="findTotal()" type="radio" name="q3" value="3"> > 3<br>
+                             <input onblur="findTotal()" type="radio" name="q3" value="2"> 1-3<br>
+                             <input onblur="findTotal()" type="radio" name="q3" value="1"> 0
+                           </p>
 
                            <h3 class="activity-description heading-color-adjustment">4. How much green or pervious('worm habitat') are is on your entire lot??</h4>
-                             <form>
-                               <input type="radio" name="climate" value="3" checked> > 40%<br>
-                               <input type="radio" name="climate" value="2"> 20 - 40 %<br>
-                               <input type="radio" name="climate" value="1"> < 20%
-                             </form>
+                             <p>
+                               <input onblur="findTotal()" type="radio" name="q4" value="3"> > 40%<br>
+                               <input onblur="findTotal()" type="radio" name="q4" value="2"> 20 - 40 %<br>
+                               <input onblur="findTotal()" type="radio" name="q4" value="1"> < 20%
+                             </p>
 
                           <h3 class="activity-description heading-color-adjustment">5. How much of what you eat do you grow?</h4>
-                            <form>
-                              <input type="radio" name="climate" value="3" checked> I can make a cucumber, tomato, and pepper salad for an entire week<br>
-                              <input type="radio" name="climate" value="2"> I can find some carrots and a potted mint plant<br>
-                              <input type="radio" name="climate" value="1"> I don't grow any of my food
-                            </form>
+                            <p>
+                              <input onblur="findTotal()" type="radio" name="q5" value="3"> I can make a cucumber, tomato, and pepper salad for an entire week<br>
+                              <input onblur="findTotal()" type="radio" name="q5" value="2"> I can find some carrots and a potted mint plant<br>
+                              <input onblur="findTotal()" type="radio" name="q5" value="1"> I don't grow any of my food
+                            </p>
                         </div>
                     </div>
+
+                    <br>
+                    <br>
+                    <p>Score : <input type="text" name="total" id="total"/> out of 15</p>
+                    <p><input type="button" value="Get Score"></p>
+
+                      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                      <script >
+                      $(document).ready(function(){
+                        $("input[type='button']").click(function(){
+                          var score = 0;
+                          score += parseInt($("input[name='q1']:checked").val());
+                          score += parseInt($("input[name='q2']:checked").val());
+                          score += parseInt($("input[name='q3']:checked").val());
+                          score += parseInt($("input[name='q4']:checked").val());
+                          score += parseInt($("input[name='q5']:checked").val());
+                          if(score){
+                            document.getElementById('total').value = score;
+                            // alert(score);
+                          } else {
+                            alert("Questions not completed");
+                          }
+                        });
+                      });
+
+                          </script>
+                    <br>
 
 
                 </div>

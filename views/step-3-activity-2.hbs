@@ -59,45 +59,72 @@
                             <br>
 
                             <h3 class="activity-description heading-color-adjustment">1. What is the most common house type?</h3>
-                            <form>
-                              <input type="radio" name="climate" value="3" checked> Multi-story aoartment<br>
-                              <input type="radio" name="climate" value="2"> Multiple units on each lot (eg. duplex, townhouse, coach-house)<br>
-                              <input type="radio" name="climate" value="1"> Single family homes
-                            </form>
+                            <p>
+                              <input onblur="findTotal()" type="radio" name="q1" value="3"> Multi-story aoartment<br>
+                              <input onblur="findTotal()" type="radio" name="q1" value="2"> Multiple units on each lot (eg. duplex, townhouse, coach-house)<br>
+                              <input onblur="findTotal()" type="radio" name="q1" value="1"> Single family homes
+                            </p>
 
                             <h3 class="activity-description heading-color-adjustment">2. % of homes on your block using solar panels?</h3>
-                            <form>
-                              <input type="radio" name="climate" value="3" checked> > 40%<br>
-                              <input type="radio" name="climate" value="2"> 20 - 40 %<br>
-                              <input type="radio" name="climate" value="1"> < 20%
-                            </form>
+                            <p>
+                              <input onblur="findTotal()" type="radio" name="q2" value="3"> > 40%<br>
+                              <input onblur="findTotal()" type="radio" name="q2" value="2"> 20 - 40 %<br>
+                              <input onblur="findTotal()" type="radio" name="q2" value="1"> < 20%
+                            </p>
 
                            <h3 class="activity-description heading-color-adjustment">3. % of cars on your block that are EVs, hybrids, or car-shares?</h3>
-                           <form>
-                             <input type="radio" name="climate" value="3" checked> > 40%<br>
-                             <input type="radio" name="climate" value="2"> 20 - 40 %<br>
-                             <input type="radio" name="climate" value="1"> < 20%
-                           </form>
+                           <p>
+                             <input onblur="findTotal()" type="radio" name="q3" value="3"> > 40%<br>
+                             <input onblur="findTotal()" type="radio" name="q3" value="2"> 20 - 40 %<br>
+                             <input onblur="findTotal()" type="radio" name="q3" value="1"> < 20%
+                           </p>
 
                            <h3 class="activity-description heading-color-adjustment">4. How far is your house to the closest public transit (e.g. bus) or local shop?</h4>
-                             <form>
-                               <input type="radio" name="climate" value="3" checked> Very far (over 20 minutes walk)<br>
-                               <input type="radio" name="climate" value="2"> fair distance (10-20 minutes walk)<br>
-                               <input type="radio" name="climate" value="1"> Vary close (0-10 minutes walk)
-                             </form>
+                             <p>
+                               <input onblur="findTotal()" type="radio" name="q4" value="3" > Very far (over 20 minutes walk)<br>
+                               <input onblur="findTotal()" type="radio" name="q4" value="2"> fair distance (10-20 minutes walk)<br>
+                               <input onblur="findTotal()" type="radio" name="q4" value="1"> Vary close (0-10 minutes walk)
+                             </p>
 
                           <h3 class="activity-description heading-color-adjustment">5. What is the amount of tree canopy on your block?</h4>
-                            <form>
-                              <input type="radio" name="climate" value="3" checked> > 40%<br>
-                              <input type="radio" name="climate" value="2"> 20 - 40 %<br>
-                              <input type="radio" name="climate" value="1"> < 20%
-                            </form>
+                            <p>
+                              <input onblur="findTotal()" type="radio" name="q5" value="3"> > 40%<br>
+                              <input onblur="findTotal()" type="radio" name="q5" value="2"> 20 - 40 %<br>
+                              <input onblur="findTotal()" type="radio" name="q5" value="1"> < 20%
+                            </p>
+                            <br>
+                            <br>
+                            <p>Score : <input type="text" name="total" id="total"/> out of 15</p>
+                            <p><input type="button" value="Get Score"></p>
+
+                              <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                              <script >
+                              $(document).ready(function(){
+                                $("input[type='button']").click(function(){
+                                  var score = 0;
+                                  score += parseInt($("input[name='q1']:checked").val());
+                                  score += parseInt($("input[name='q2']:checked").val());
+                                  score += parseInt($("input[name='q3']:checked").val());
+                                  score += parseInt($("input[name='q4']:checked").val());
+                                  score += parseInt($("input[name='q5']:checked").val());
+                                  if(score){
+                                    document.getElementById('total').value = score;
+                                    // alert(score);
+                                  } else {
+                                    alert("Questions not completed");
+                                  }
+                                });
+                              });
+
+                                  </script>
+                            <br>
                             <br>
                             <a href="../step-3/a2-p2" class="button">Next</a>
                             <br>
                             <p></p>
                         </div>
                     </div>
+
                 </div>
 
     </div>
