@@ -2,8 +2,6 @@
 
 <a href="http://icoolkit.net" target="_blank">Official website for the Coolkit</a>
 
-![alt text](https://raw.githubusercontent.com/ilovefroyos/coolkit/master/coolkit.png)
-
 ## Installation
 ### Requirements
 You'll need to install the following before you can run the application:
