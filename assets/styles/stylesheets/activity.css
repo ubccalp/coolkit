@@ -4,6 +4,18 @@
     text-decoration: none;
 }
 
+.activity-page-next-link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: right;
+}
+
+#HASH {
+  display: flex;
+  justify-content: space-between;
+}
+
 .large-icon {
     display: block;
     width: 85px;
@@ -17,7 +29,7 @@
     width: 40px;
 }
 
-.activity-page-title { 
+.activity-page-title {
     color: #ffffff;
     font-size: 30px;
     line-height: 36px;
@@ -29,7 +41,7 @@
     font-size: 18px;
     line-height: 22px;
 }
-  
+
 .activity-page-question-answer {
     color: #ffffff;
     font-size: 15px;

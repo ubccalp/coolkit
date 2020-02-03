@@ -33,7 +33,10 @@
 
         <div class="col-md-3 column-adjustment-step-4 activity-page-left-panel-column-adjustment">
             <div class="activity-page-left-panel-div-block">
-                <a href="../step-4" class="activity-page-back-link">&lt; Back</a>
+              <div id="HASH">
+                <span><a href="../step-4" class="activity-page-back-link">&lt; Back</a></span>
+                <span><a href="../step-4/a2" class="activity-page-next-link">Next &gt;</a></span>
+              </div>
                   <img src="/media/images/highlow-carbon-future-visioning2x.png" alt="" class="large-icon">
                   <div class="who-its-for-div-block">
                     <img src="/media/images/individual-icon.png" class="small-icon">
@@ -81,7 +84,7 @@
                       <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
                       <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
                     </div>
-
+                    <br>
                     <p>Example 2:</p>
                     <div class="slideshow-container">
                       <div class="mySlides2">
@@ -95,8 +98,8 @@
                       <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
                       <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                     </div>
-
-                    <!-- <p>Slideshow 3:</p>
+                    <br>
+                    <p>Example 3:</p>
                     <div class="slideshow-container">
                       <div class="mySlides3">
                         <img src="/media/images/slide3before.png" style="width:100%">
@@ -106,32 +109,17 @@
                         <img src="/media/images/slide3after.png" style="width:100%">
                       </div>
 
-                      <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                      <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                      <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
                     </div>
 
-                    <p>Slideshow 4:</p>
-                    <div class="slideshow-container">
-                      <div class="mySlides4">
-                        <img src="/media/images/slide4before.png" style="width:100%">
-                      </div>
-
-                      <div class="mySlides4">
-                        <img src="/media/images/slide4after.png" style="width:100%">
-                      </div>
-
-                      <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                      <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-                    </div> -->
 
                     <script>
-                    var slideIndex = [1,1];
-                    var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
+                    var slideIndex = [1,1,1];
+                    var slideId = ["mySlides1", "mySlides2", "mySlides3"];
                     showSlides(1, 0);
                     showSlides(1, 1);
-                    // showSlides(1, 0);
-                    // showSlides(1, 1);
-
+                    showSlides(1, 2);
 
                     function plusSlides(n, no) {
                       showSlides(slideIndex[no] += n, no);
@@ -148,12 +136,6 @@
                       x[slideIndex[no]-1].style.display = "block";
                     }
                     </script>
-
-                    <!-- <img src="/media/images/visualization1.png" alt="" width= 100%>
-                    <img src="/media/images/visualization2.png" alt="" width= 100%>
-                    <img src="/media/images/visualization3.png" alt="" width= 100%>
-                    <img src="/media/images/visualization4.png" alt="" width= 100%>
-                    <img src="/media/images/visualization5.png" alt="" width= 100%> -->
 
                    </br>
                   </br>

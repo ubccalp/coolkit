@@ -33,7 +33,10 @@
 
         <div class="col-md-3 column-adjustment-step-3 activity-page-left-panel-column-adjustment">
             <div class="activity-page-left-panel-div-block">
-                <a href="../step-3" class="activity-page-back-link">&lt; Back</a>
+              <div id="HASH">
+                <span><a href="../step-3/a1" class="activity-page-back-link">&lt; Back</a></span>
+                <span><a href="../step-3/a2" class="activity-page-next-link">Next &gt;</a></span>
+              </div>
                 <img src="/media/images/beautify-your-yard2x.png" alt="" class="large-icon">
                 <div class="who-its-for-div-block"><img src="/media/images/individual-icon.png" class="small-icon">
                 <div class="who-its-for">Individual</div>
@@ -42,7 +45,7 @@
                   <img src="/media/images/alarm-clock.png" class="small-icon">
                     <div class="time-to-complete">20 - 30 minutes</div>
                 </div>
-                <h1 class="activity-page-title">Rate Your Block</h1>
+                <h1 class="activity-page-title">Rate Your Household</h1>
                 <h2 class="activity-page-question">Why do this?</h2>
                 <p class="activity-page-question-answer">To quickly identify different types of "habitats" or
                   surfaces in your neighbourhood.</p>
@@ -113,8 +116,15 @@
                           score += parseInt($("input[name='q5']:checked").val());
                           if(score){
                             document.getElementById('total').value = score;
-                            // alert(score);
-                          } else {
+                            if (score >= 12){
+                              alert("Wow you scored a " +score + "! You're doing amazing!");
+                            }
+                            else if (score >7 && score<12){
+                              alert("You scored a " +score + ". You're doing okay.");
+                            }
+                            else if (score<=7){
+                              alert("You scored a " +score + ". :( There's room for improvement.");
+                            }                          } else {
                             alert("Questions not completed");
                           }
                         });

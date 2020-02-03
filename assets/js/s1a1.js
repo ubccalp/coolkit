@@ -5,7 +5,7 @@ generatePdfButton.addEventListener('click', printPDF);
 // var removeStoryButton = document.getElementById("removeStory");
 // removeStoryButton.addEventListener('click', removeStoryFunc);
 
-var numberOfStories = 1;
+var numberOfStories = 2;
 
 function squirrelChanged(squirrel) {
     if (squirrel.value == "YesSquirrel") {
@@ -16,40 +16,40 @@ function squirrelChanged(squirrel) {
     }
 }
 
-function addStoryFunc() {
-    numberOfStories++;
-
-    // create elements, add content, add classes
-    const label = document.createElement("label");
-    label.classList.add("width-adjustment");
-    const header = document.createElement("h4");
-    header.textContent = "Story " + numberOfStories;
-    //label.textContent = "Story " + numberOfStories;
-    header.classList.add("storyheading");
-
-    //const lineBreak = document.createElement("br");
-    const lineBreak2 = document.createElement("br");
-
-    const textarea = document.createElement("textarea");
-    textarea.classList.add("textarea-size-adjustment");
-    textarea.classList.add("textarea-identifier");
-
-    // append to document
-    //label.appendChild(lineBreak);
-    label.appendChild(header);
-    label.appendChild(textarea);
-    //label.appendChild(lineBreak2);
-    document.getElementById("storyList").appendChild(label);
-}
-
-function removeStoryFunc() {
-    var confirmation = window.confirm("Delete Story?");
-    if (confirmation && numberOfStories > 1) {
-        numberOfStories--;
-        var lastElement = document.querySelector('label:last-child');
-        lastElement.parentNode.removeChild(lastElement);
-    }
-}
+// function addStoryFunc() {
+//     numberOfStories++;
+//
+//     // create elements, add content, add classes
+//     const label = document.createElement("label");
+//     label.classList.add("width-adjustment");
+//     const header = document.createElement("h4");
+//     header.textContent = "Story " + numberOfStories;
+//     //label.textContent = "Story " + numberOfStories;
+//     header.classList.add("storyheading");
+//
+//     //const lineBreak = document.createElement("br");
+//     const lineBreak2 = document.createElement("br");
+//
+//     const textarea = document.createElement("textarea");
+//     textarea.classList.add("textarea-size-adjustment");
+//     textarea.classList.add("textarea-identifier");
+//
+//     // append to document
+//     //label.appendChild(lineBreak);
+//     label.appendChild(header);
+//     label.appendChild(textarea);
+//     //label.appendChild(lineBreak2);
+//     document.getElementById("storyList").appendChild(label);
+// }
+//
+// function removeStoryFunc() {
+//     var confirmation = window.confirm("Delete Story?");
+//     if (confirmation && numberOfStories > 1) {
+//         numberOfStories--;
+//         var lastElement = document.querySelector('label:last-child');
+//         lastElement.parentNode.removeChild(lastElement);
+//     }
+// }
 
 function printPDF() {
   var doc = new jsPDF();
@@ -60,8 +60,24 @@ function printPDF() {
   doc.setFontSize(15);
   doc.addImage(imgData, 'PNG', 0, 0, 210, 290);
 
-  doc.text(15, 185, document.getElementById("story1").value);
-  doc.text(15, 243, document.getElementById("story2").value);
+  // doc.text(15, 185, document.getElementById("story1").value);
+  // doc.text(15, 243, document.getElementById("story2").value);
+
+  var storyCollection = document.getElementsByClassName("textarea-identifier");
+
+  var textField = new TextField();
+  textField.Rect = [12, 180, 180, 40];
+  textField.multiline = true;
+  textField.V = storyCollection[0].value;
+  doc.addField(textField);
+
+  var textField = new TextField();
+  textField.Rect = [12, 235, 180, 40];
+  textField.multiline = true;
+  textField.V = storyCollection[1].value;
+  doc.addField(textField);
+  
+
     // var storyCollection = document.getElementsByClassName("textarea-identifier");
     // for (j = 0; j < numberOfStories; j++) {
     //     console.log(storyCollection[j].value);

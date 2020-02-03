@@ -27,10 +27,10 @@
     min-height: 1000px;
     padding-right: 2%;
     padding-left: 2%;
-    background-image: url('../../media/images/Tree-24x2x.png');
+    background-image: url('../../media/images/footprints.png');
     background-size: cover;
     margin-top: 20px;
-    width: 100%
+    /* width: 100% */
 }
 
 .div-block-9 {
@@ -38,7 +38,6 @@
     width: 60%;
     float: left;
     clear: none;
-
 }
 
 .div-block-10 {
