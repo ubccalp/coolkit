@@ -12,6 +12,8 @@ var step_5 = require('./step-5');
 var ed = require('./ed');
 var resources = require('./resources');
 var about_us = require ('./about-us');
+var feedback = require ('./feedback');
+
 
 router.use('/step-1', step_1);
 router.use('/step-2', step_2);
@@ -22,7 +24,8 @@ router.use('/ed', ed);
 router.use('/resources', resources);
 router.use('/community', community);
 router.use('/about-us', about_us);
-router.use('/background', background)
+router.use('/background', background);
+router.use('/feedback', feedback);
 
 
 
