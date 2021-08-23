@@ -1,25 +1,25 @@
-var mongo = require('mongodb');
+// var mongo = require('mongodb');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var path = require('path');
 var routes = require('./routes');
 const bodyParser= require('body-parser')
 
-var db
+// var db
 
-const MongoClient = require('mongodb').MongoClient;
+// const MongoClient = require('mongodb').MongoClient;
 
 // replace the uri string with your connection string.
-const uri = "mongodb+srv://tiffany:tiff123@icoolkit-jbjkz.mongodb.net/test?retryWrites=true&w=majority"
-MongoClient.connect(uri,{ useUnifiedTopology: true }, function(err, client) {
-  // perform actions on the collection object
-   if(err) {
-        console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
-   }
-   db = client.db("coolkit");
-   console.log('Connected...');
-   client.close();
-});
+// const uri = "mongodb+srv://tiffany:tiff123@icoolkit-jbjkz.mongodb.net/test?retryWrites=true&w=majority"
+// MongoClient.connect(uri,{ useUnifiedTopology: true }, function(err, client) {
+//   // perform actions on the collection object
+//    if(err) {
+//         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
+//    }
+//    db = client.db("coolkit");
+//    console.log('Connected...');
+//    client.close();
+// });
 
 
 var app = express();
