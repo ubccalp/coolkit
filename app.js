@@ -10,7 +10,7 @@ const bodyParser= require('body-parser')
 // const MongoClient = require('mongodb').MongoClient;
 
 // replace the uri string with your connection string.
-// const uri = "mongodb+srv://tiffany:tiff123@icoolkit-jbjkz.mongodb.net/test?retryWrites=true&w=majority"
+// const uri = process.env.MONGODB_URI
 // MongoClient.connect(uri,{ useUnifiedTopology: true }, function(err, client) {
 //   // perform actions on the collection object
 //    if(err) {
